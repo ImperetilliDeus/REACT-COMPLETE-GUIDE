@@ -1,8 +1,7 @@
-import './ExpenseItem.js';
-import ExpenseItem from './ExpenseItem.js';
+import './Expense.css';
+import Expense from './Expense.js';
 
 function App() {
-
   const expenses = [
     {
       id: 'e1',
@@ -24,32 +23,10 @@ function App() {
       date: new Date(2021, 5, 12)
     },
   ];
+  
 
   return (
-    <div>
-      <h2>Let's get started!</h2>
-      <h2>머신러닝에 너무 흥미가 없음</h2>
-      <ExpenseItem 
-      title={expenses[0].title}
-      amount={expenses[0].amount}
-      date={expenses[0].date}
-      ></ExpenseItem>
-      <ExpenseItem
-      title={expenses[1].title}
-      amount={expenses[1].amount}
-      date={expenses[1].date}
-      ></ExpenseItem>
-      <ExpenseItem
-      title={expenses[2].title}
-      amount={expenses[2].amount}
-      date={expenses[2].date}
-      ></ExpenseItem>
-      <ExpenseItem
-      title={expenses[3].title}
-      amount={expenses[3].amount}
-      date={expenses[3].date}
-      ></ExpenseItem>
-    </div>
+    <Expense items={expenses}/>
   );
 }
 
